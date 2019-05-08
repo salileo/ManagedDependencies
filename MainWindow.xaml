@@ -1,0 +1,23 @@
+﻿<Window x:Class="ManagedDependencies.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="500" Width="525">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        
+        <TextBox Name="ctrlCurrentDll" Grid.Row="0" Grid.Column="0" IsReadOnly="True"/>
+        <Button Grid.Row="0" Grid.Column="1" Padding="10,0" Click="Button_Click">Browse</Button>
+
+        <ListBox Name="ctrlFoundDependencies" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" SelectionMode="Extended"></ListBox>
+        <ListBox Name="ctrlNotFoundDependencies" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" SelectionMode="Extended"></ListBox>
+    </Grid>
+</Window>
